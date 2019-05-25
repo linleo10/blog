@@ -73,6 +73,16 @@ class Leoshen
     		$login = Factory::create('Admin_Login');
     		$login->check();
     		break;
+    		
+    		case 'new_post':
+    		$np = Factory::create('Admin_New_Post');
+    		$np->show();
+    		break;
+    		
+    		case 'add_new_post':
+    		$np = Factory::create('Admin_New_Post');
+    		$np->action();
+    		break;
     	}
     	
     }

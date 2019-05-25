@@ -17,5 +17,5 @@ route:
   words_api: /api/getwords?format=js&charset=utf-8
   getcomments_api: /api/getcomments
   addcomments_api: /api/addcomments
-  stat_api: https://stat.lgjuzi.com/core/get_code.php?site_id=2
+  stat_api: //js.users.51.la/20064057.js
 ...

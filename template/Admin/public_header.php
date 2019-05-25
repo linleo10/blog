@@ -60,5 +60,6 @@ margin-left: 5px;
 <body>
 <br><center><nav class="f1"><a class="f2" href="/admin_v2">后台首页 </a>
 <a class="f2" href="/admin_v2/manage">文章列表 </a>
+<a class="f2" href="/admin_v2/new_post">发布文章 </a>
 <a class="f2" href="/admin_v2/settings">网站设置</a>
 </nav></center><br>

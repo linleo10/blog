@@ -11,6 +11,8 @@ class Api_Getwords extends Tool
 * string format : 输出格式(text/json/js)
 * string charset : 输出编码 (utf-8/gb2312)
 */
+header("Pragma:no-cache");  
+header("Cache-Control:no-cache,must-revalidate");
 $charset = $_GET['charset'];
 if ($charset != 'utf-8' && $charset != 'gb2312') {
 exit('参数错误');

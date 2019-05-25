@@ -87,10 +87,10 @@ foreach ($cates as $c) {
 <?= $tool->pager($p, $page_size, $total_num, '/page') ?>
 </center>
 </div></div>
-<script src="<?= $stat_api ?>"></script>
 <script src="<?= $words_api ?>"></script>
 <script>
 text();
 </script>
+<script src="<?= $stat_api ?>"></script>
 </body>
 </html>	

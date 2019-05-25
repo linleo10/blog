@@ -105,6 +105,14 @@ $dispatcher->post('/admin_v2/login/check',
 function () {
 	Leoshen::admin('login_check');
 });
+$dispatcher->get('/admin_v2/new_post',
+function () {
+	Leoshen::admin('new_post');
+});
+$dispatcher->post('/admin_v2/new_post/post',
+function () {
+	Leoshen::admin('add_new_post');
+});
 // Fetch method and URI from somewhere
 $httpMethod = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];

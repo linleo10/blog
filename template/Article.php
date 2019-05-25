@@ -78,7 +78,10 @@ if (empty($next)) {
 }
 ?>
 <!--下一篇：<a href ="<?= $next[0]['aid'] ?>"><?= $next[0]['title'] ?></a>-->
-
+<script src="<?= $words_api ?>"></script>
+<script>
+text();
+</script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script data-no-instant>
 $(document).ready(function(){$.getJSON("<?= $getcomments_api ?>?aid=<?= $aid ?>",function(json){function sort(a,b){return a.int-b.int;}
@@ -86,9 +89,5 @@ json.sort(sort);$.each(json,function(index,array){var data="<li><p>"+""+array["u
 var date=new Date().getTime();var myDate=new Date();var year=myDate.getFullYear();var month=myDate.getMonth()+1;var date=myDate.getDate();var h=myDate.getHours();var m=myDate.getMinutes();var s=myDate.getSeconds();var now=year+"-"+p(month)+"-"+p(date)+" "+p(h)+":"+p(m)+":"+p(s);$.ajax({type:"POST",url:"<?= $addcomments_api ?>",data:{aid:"<?= $aid ?>",username:$(".con .name").val(),content:$(".con .content").val(),email:$(".con .email").val(),website:$(".con .website").val(),time:"<?= time() ?>",ip:"<?= $_SERVER['REMOTE_ADDR'] ?>"},success:function(data){var str="<li><p>"+"用户"+$(".con .name").val()+":"+"</p><span>"+$(".con .content").val()+"</span></br><a>"+now+"</a></li>";$(".ul").append(str);alert("评论成功！");location.href.refresh;},error:function(){console.log("失败，请稍后再试！");}});}});});
 </script>
 <script src="<?= $stat_api ?>"></script>
-<script src="<?= $words_api ?>"></script>
-<script>
-text();
-</script>
 </body>
 </html>

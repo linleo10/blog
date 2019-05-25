@@ -79,9 +79,10 @@ class Admin_Settings extends Tool
 		'stat_api' => $stat_api
 		);
 		$yaml = yaml_emit($data);
-		print_r($yaml);
 		$confile = fopen("core/config/config.yaml", "w") or die("Unable to open file!");
 		fwrite($confile, $yaml);
 		fclose($confile);
+		header('HTTP/1.1 301 Moved Permanently'); 
+		header('Location: /admin_v2/settings');
 	}
 }
