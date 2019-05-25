@@ -1,0 +1,21 @@
+---
+website:
+  domain: blog.leoshen.cn
+  is_ssl_on: "1"
+  force_ssl: "1"
+  cdn_host1: https://s3.lgjuzi.com
+  cdn_host2: https://static.lgjuzi.com
+db:
+  dsn: mysql:dbname=blog;host=116.62.138.122
+  user: blog
+  pass: "747604"
+  prefix: leoshen_
+pager:
+  page_size: "4"
+  page_url: ""
+route:
+  words_api: /api/getwords?format=js&charset=utf-8
+  getcomments_api: /api/getcomments
+  addcomments_api: /api/addcomments
+  stat_api: https://stat.lgjuzi.com/core/get_code.php?site_id=2
+...
